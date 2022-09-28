@@ -1,0 +1,101 @@
+#include<iostream>
+using namespace std;
+
+
+class node{
+int n ;
+int a;
+int s;
+public:
+    void getdata(){
+        cout<<"Enter the data you want to check for :"<<endl;
+    cin>>n;
+    cout<<"Enter the data for second data "<<endl;
+    cin>>a;
+    }
+    void sum(){
+
+    if(n>0&&a>0){
+        s = a+n;
+        cout<<"the sum is "<<s<<endl;
+    }
+
+    else{
+        cout<<"enter data is negative"<<endl;
+    }
+
+    }
+
+};
+
+/*class node{
+int n ;
+public:
+    void getdata(){
+        cout<<"Enter the data you want to check for :"<<endl;
+    cin>>n;
+    }
+    void check(){
+    if(n%4==0){
+        cout<<"This is a leap year"<<endl;
+    }
+    else{
+    cout<<"This is a not a leap year"<<endl;
+
+    }
+
+
+    }
+};
+
+/*class node{
+int n ;
+public:
+    void getdata(){
+        cout<<"Enter the data you want to check for :"<<endl;
+    cin>>n;
+    }
+
+    void check(){
+
+    if(n>0){
+        cout<<"This is a good number and positive"<<endl;
+    }
+    else if(n==0){
+    cout<<"This is a zero ans has no value"<<endl;
+    }
+    else{
+        cout<<"This is a negative number and a bad number "<<endl;
+    }
+
+    }
+};
+
+
+/*class node{
+    int n;
+public:
+    void getdata(){
+    cin>>n;
+    }
+    void check(){
+
+    if(n>0){
+    cout<<"it is positive"<<endl;
+    }
+    else{
+    cout<<"it is negative"<<endl;
+    }
+
+    }
+};*/
+
+int main(){
+
+/*node n1;
+n1.getdata();
+n1.check();*/
+
+node n1;
+n1.getdata();
+n1.sum();
