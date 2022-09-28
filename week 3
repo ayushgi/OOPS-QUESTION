@@ -1,0 +1,134 @@
+#include<iostream>
+#include<cmath>
+#include<string>
+#include<algorithm>
+#include<vector>
+using namespace std;
+
+
+class convert{
+    public:
+    char str;
+
+    void get_str(){
+        
+            cin>>str;
+    }
+void tolower(){
+    if(str>='a'&&str<='z'){
+        char ch = str+'A'-'a';
+        cout<< ch<<endl;
+    }
+    else{
+        cout<< str<<endl;
+    }
+}
+
+void toupper(){
+    if(str>='a'&&str<='z'){
+        char ch = str+'a'-'A';
+        cout<< ch<<endl;
+    }
+    else{
+        cout<< str<<endl;
+    }
+}
+};
+
+
+
+Assinging value 
+class student{
+    public:
+    int roll_no;
+    string name;
+    void setdata(){
+        roll_no = 2;
+        name = "Jhon";
+    }
+    void display(){
+        cout<<roll_no<<endl;
+        cout<<name;
+    }
+};
+
+UNDERSTANDING CLASS AND OBJECT 
+class temp{
+    public:
+    int age;
+    char name[20];
+    void setdata(){
+       cin>>age;
+       cin>>name;
+    }
+    void display(){
+        cout<<age<<endl;
+        cout<<name<<endl;
+    }
+};
+    Question 3 
+class circle{
+    public:
+int radius;
+float ar;
+float peri;
+void getdata(){
+    cin>>radius;
+}
+void area(){
+ar=3.14*radius*radius;
+cout<<ar<<endl;
+}
+void perimeter(){
+    peri= 2*3.14*radius;
+    cout<<peri;
+}
+};
+
+
+class cal{
+public:
+int a,b,c;
+int area;
+void getdata(){
+    cin>>a>>b>>c;
+}
+void ar(){
+area = a*b*c;
+cout<<area;
+}
+};
+
+
+int main(){
+        // q1 
+ student s;
+ s.setdata();
+s.display();
+Q2 
+UNDERSTANDING CLASS AND OBJECT 
+
+ temp t;
+ t.setdata();
+  t.display();
+Q3 
+circle c;
+c.getdata();
+c.area();
+c.perimeter();
+
+    Q 4
+check c;
+
+c.get_str();
+c.tolower();
+
+
+// Q 5 
+
+cal c;
+c.getdata();
+c.ar();
+
+    return 0;
+}
