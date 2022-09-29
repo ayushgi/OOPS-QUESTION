@@ -1,0 +1,97 @@
+//calculator
+#include<iostream>
+using namespace std;
+int main(){
+    int a,b,c;
+    cout<<"Enter 2 integers for calculation"<<endl;
+    cin>>a>>b;
+    cout<<"Enter 1 for addition, 2 for subtraction, 3 for multiplication, 4 for division and 5 for modulus"<<endl;
+    cin>>c;
+    switch(c){
+        case 1:
+        cout<<"the sum is"<<a+b<<endl;
+        break;
+        case 2:
+        cout<<"the sub is"<<a-b<<endl;
+        break;
+        case 3:
+        cout<<"the product is"<<a*b<<endl;
+        break;
+        case 4:
+        cout<<"the div is"<<a/b<<endl;
+        break;
+        case 5:
+        cout<<"the mod is"<<a%b<<endl;
+        break;
+    }
+    return 0;}
+    
+    
+    //power
+    #include<iostream>
+#include<cmath>
+using namespace std;
+int main(){
+    int a,b;
+    cout<<"Enter the base and it's exponent"<<endl;
+    cin>>a>>b;
+    cout<<"the answer is "<<pow(a,b)<<endl;
+    return 0;
+}
+
+
+//minimum number
+#include<iostream>
+using namespace std;
+int main(){
+int a,b,c;
+cout<<"Enter 3 numbers "<<endl;
+cin>>a>>b>>c;
+if(a<b&&a<c){
+cout<<"smallest number is "<<a<<endl;
+}
+else if(b<a&&b<c){
+    cout<<"smallest number is "<<b<<endl;
+}
+else if(c<a&&c<b){
+    cout<<"smallest number is "<<c<<endl;
+}
+else if(a==b||a==c||b==c){
+    cout<<"smallest does not exist due to repetition"<<endl;
+}
+return 0;}
+
+
+
+//guess name
+#include<iostream>
+using namespace std;
+int main(){
+    int a=7,b;
+    cond: cout<<"Enter your guess number"<<endl;
+    cin>>b;
+    if(b==a){
+        cout<<"Well guessed!"<<endl;
+    }
+    else{
+        cout<<"Well tried, guess again!"<<endl;
+        goto cond;
+    }
+ return 0;
+}
+
+
+//reverse string
+#include <iostream>
+#include <algorithm> 
+#include<string>
+using namespace std;
+
+int main()
+{ string str;
+    cout<<"Enter the string"<<endl;
+    cin>>str;
+    reverse(str.begin(), str.end()); 
+	cout<<"reversed string is "<<str; 
+    return 0;
+}
