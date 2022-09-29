@@ -1,0 +1,108 @@
+//volume of cube
+#include <iostream>
+ using namespace std;
+ class cube{
+      public:
+     int length;
+     int breadth;
+     int height;
+
+     cube(int length,int breadth,int height ){
+       
+         cout<<"the volume is " <<length*breadth*height<<endl;
+     }
+     ~cube(){
+         delete (length);
+          delete (breadth);
+          delete (height);
+     }
+ };
+ int main(){
+   cube(4,5,6);
+     return 0;
+ }
+ 
+ 
+ //parameterized constructor
+ #include <iostream>
+using namespace std;
+class cons{
+    int a;
+    int b;
+    int c;
+    public:
+    cons(int a,int b,int c){
+        cout<<a<<b<<c;
+    }
+};
+int main(){
+    cons(1,2,3);
+    return 0;
+}
+
+
+//reversing a number's digits
+#include <iostream>
+using namespace std;
+class rev{
+    public:
+    int n,digit,reverse;
+    rev(int n){
+while(n!=0){
+    digit=n%10;
+    n=n/10;
+    reverse=digit;
+    cout<<reverse<<endl;
+}    
+       
+    }
+};
+
+int main(){
+    rev(345);
+    return 0;
+}
+
+
+//sum of n^3 terms
+#include <iostream>
+#include<math.h>
+using namespace std;
+class Power{
+    public:
+    int n;
+    Power(int n){
+        while(n!=0){
+            int temp=pow(n,3);
+            cout<<temp;
+            n--;
+        }
+    }
+};
+int main() {
+  Power(5);
+    return 0;
+}
+
+
+
+//Hospital
+#include <iostream>
+using namespace std;
+class hospital{
+public:
+
+hospital( int t){
+ while(t--){
+ int charge;int days;
+ cin>>charge>>days;
+ cout<<"the cost is "<<charge*days<<endl;}
+}
+
+};
+
+int main() {
+
+hospital(2);
+    return 0;
+}
