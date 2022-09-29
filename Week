@@ -1,0 +1,184 @@
+#include <iostream>
+#include<string>
+#include<algorithm>
+using namespace std;
+
+
+
+// question 1
+
+// class student{
+//  public:
+//  string name;
+    
+// student(){
+//  this->name = "unknown";
+// }
+// void getdata(){
+//  cin>>name;
+// }
+// void print(){
+//  cout<<"Your Name is "<<name;
+// }
+
+// };
+
+
+//question two 
+
+
+// class AddAmount{
+// int amount;
+// int a;
+// public:
+// AddAmount(){
+//  this->amount =50;
+// }
+// AddAmount(int a){
+//  this->amount = a;
+// }
+// void getdata(int ap){
+//  this->a = ap;
+// }
+
+// void add(){
+//  int as = amount+a;
+//  cout<<as;
+// }
+
+// };
+
+
+class area{
+
+int length;
+int breadth;
+int side;
+public:
+void rect(int l,int b){
+    this->length=l;
+    this->breadth = b;
+    int areaofrectangle = length*breadth;
+    cout<<areaofrectangle<<endl;
+}
+
+void square(int s){
+    this->side = s;
+    int areaofsquare = side*side;
+    cout<<areaofsquare;
+}
+
+
+};
+
+// class bank{
+//  int amount;
+//  public:
+//  void banka();
+//  void bankb();
+//  void bankc();
+// };
+
+//  void bank:: banka{
+//      int amount;
+//      void getbalance(){
+//          amount = 1000;
+//          cout<<amount;
+//      }
+//  }
+//  void bank::  bankb{
+//      int amount;
+//      void getbalance(){
+//          amount =2000;
+//          cout<<amount;
+//      }
+//  }
+//  void bank::  bankc{
+//      int amount;
+//      void getbalance(){
+//          amount=3000;
+//          cout<<amount;
+//      }
+//  }
+
+class rev{
+    string s;
+    public:
+    void getdata(){
+        cin>>s;
+    }
+    void print(){
+        reverse(s.begin(),s.end());
+        cout<<s;
+    }
+};
+class volume{
+    int length;
+    int breadth;
+    int height;
+    int a;
+    public:
+    void cube(int si){
+        this->a =si; 
+        int area = a*a*a;
+        cout<<area<<endl;
+    }
+    void cuboid(int l,int b,int h){
+        this->length = l;
+        this->breadth = b;
+        this->height= h;
+        cout<<length*breadth*height<<endl;
+    }
+};
+
+class pali{
+string s;
+public:
+bool check(string st){
+    this->s = st;
+    int i=0;
+    int e = s.length();
+    while(i<e){
+        if(s[i]!=s[e]){
+            cout<<"false"<<endl;
+            break;
+        }
+        i++;e--;
+    }
+    cout<<"true";
+    return 0;
+}
+};
+
+
+int main() {
+    // student s;
+    // s.getdata();
+    // s.print();
+    // AddAmount a;
+    // // a.AddAmount();
+    // a.getdata(45);
+    // a.add();
+
+
+    // area a;
+    // a.rect(10,20);
+    // a.square(30);
+
+
+
+    // bank b;
+    
+    // b.banka();
+    // b.bankb();
+    // b.bankc(); 
+
+    // rev r;
+    // r.getdata();
+    // r.print();
+
+    // volume v;
+    // v.cube(25);
+    // v.cuboid(10,25,36);
+pali p ;
+p.check("nitin");
