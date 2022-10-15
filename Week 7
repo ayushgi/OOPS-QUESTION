@@ -1,0 +1,185 @@
+#include<iostream>
+#include<cmath>
+#include<string>
+#include<algorithm>
+#include<vector>
+using namespace std;
+
+
+// Displaying all information of employee 
+
+class student{
+public:
+int roll_no;
+string name;
+int age;
+string dateofbirth;
+};
+class data : public student{
+    public:
+void getdata(){
+    cin>>roll_no;
+    cin>>name;
+    cin>>age;
+    cin>>dateofbirth;
+}
+void display(){
+    cout<<roll_no<<endl;
+    cout<<name<<endl;
+    cout<<age<<endl;
+    cout<<dateofbirth<<endl;
+}
+};
+
+
+// DISPLAYING ALL INFORMATION OF EMPLOYEE USING MULTIPLE INHERITENCE
+
+class employee{
+public:
+int id_no;
+string name;
+int age;
+string department;
+};
+class data :public employee{
+public:
+int salary ;
+};
+class temp: public data{
+public:
+int averagesalary;
+void getdata(){
+    cin>>id_no;
+    cin>>name>>age>>department>>salary;
+}
+void display(){
+    averagesalary  = (salary*12)/12;
+    cout<<name<<endl;
+    cout<<age<<" "<<department<<" "<<salary<<" "<<averagesalary<<" "<<endl;
+}
+};
+
+// FINDING CUBE AND SQUARE USING MULTIPLE INHERITENCE
+
+class cube{
+public:
+int side;
+};
+class finding :public cube{
+public:
+void getdata(){
+    cin>>side;
+}
+void display(){
+    cout<<side*side*side<<endl;
+}
+};
+class square:public cube{
+    public:
+    void getdata(){
+        cin>>side;
+    }
+    
+void display(){
+    cout<<side*side<<endl;
+}
+};
+
+// SHOWING EMPLOYEE DETAILS USING MULTIPLE INHERITENCE
+
+class employee{
+    public:
+int salary;
+int pf;
+char  department[200];
+};
+class sal:public employee{
+public:
+void getdata(){
+    cin>>salary;
+}
+int cal;
+void display(){
+    cal = 0.2*salary;
+    cout<<cal<<endl;
+}
+
+};
+class dep : public sal{
+public:
+void getdata(){
+    // cin.getline(department,200);
+    cin>>department;
+}
+void display(){
+    cout<<department<<endl;
+}
+};
+
+// DISPLAYING NUMBER OF FRUITS IN A BASKET
+
+class fruit{
+protected:
+int n;
+
+};
+class apple: protected fruit{
+public:
+void getdata(){
+    cin>>n;
+}
+void display(){
+int ans = 0.2*n;
+cout<<"20 % of fruit in a basket is apple: "<<endl;
+cout<<"The Number of Apple in Basket is :"<<ans<<endl;
+}
+};
+class Mangoes:protected fruit{
+public:
+void getdata(){
+    cin>>n;
+}
+void display(){
+    cout<<"10 % of fruit is Mangoes :"<<endl;
+    int ans = 0.1*n;
+    cout<<"The Number of mangoes :"<<ans<<endl;
+}
+};
+
+
+
+
+int main(){
+data d;
+d.getdata();
+d.display();
+
+
+temp p;
+p.getdata();
+p.display();
+
+
+finding f;
+square s;
+f.getdata();
+f.display();
+s.getdata();
+s.display();
+
+sal s;
+s.getdata();
+s.display();
+dep d;
+d.getdata();
+d.display();
+
+apple a;
+Mangoes m;
+a.getdata();
+a.display();
+m.getdata();
+m.display();
+
+return 0;
+}
